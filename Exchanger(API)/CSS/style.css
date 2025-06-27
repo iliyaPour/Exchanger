@@ -1,0 +1,163 @@
+:root{
+    --bg-dark: hsl(0, 0%, 0%);
+    --bg: hsl(0, 0%, 5%);
+    --bg-light: hsl(0, 0%, 10%);
+    --text: hsl(0, 0%, 95%);
+    --text-muted: hsl(0, 0%, 70%);
+    --border: hsl(0, 0%, 30%);
+    --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
+    --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+    --highlight: hsl(0, 0%, 60%);
+    --border-card: solid 1px var(--border);
+    --shadow: 0 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+}
+
+body.light {
+    --bg-dark: hsl(0, 0%, 90%);
+    --bg: hsl(0, 0%, 95%);
+    --bg-light: hsl(0, 0%, 100%);
+    --text: hsl(0, 0%, 5%);
+    --text-muted: hsl(0, 0%, 30%);
+        --border: hsl(0, 0%, 30%);
+    --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
+    --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+    --highlight: hsl(0, 0%, 100%);
+    --border-card: solid 1px var(--bg);
+
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-muted);
+}
+
+label{
+    color: var(--text-muted);
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    
+}
+
+h1{
+    color: var(--text);
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+h5{
+    color: var(--text);
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#result{
+    color: var(--text);
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 1em;
+    
+}
+
+#E-div{
+    background: var(--gradient);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: var(--border-card);
+    border-top: solid 1px var(--highlight);
+    box-shadow: var(--shadow);
+
+}
+
+#E-div:hover{
+    background: var(--gradient-hover);
+}
+
+
+button{
+    background: var(--bg-light);
+    color: var(--text);
+    border-radius: 1rem;
+    border: var(--border-car);
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+button:active{
+    background: var(--bg);
+    color: var(--text-muted);
+    box-shadow: 0 0px 0px hsla(0, 0%, 0%, 0.07), 0px 2px 2px hsla(0, 0%, 0%, 0.15);
+}
+
+
+input{
+    background: var(--bg-light);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.5em;
+    font-size: 1.2em;
+    box-shadow: var(--shadow);
+}
+
+select{
+    background: var(--bg-light);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.5em;
+    font-size: 1em;
+    box-shadow: var(--shadow);
+}
+
+
+.theme-checkbox {
+    --toggle-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 6.25em;
+    height: 3.125em;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background-size: 205%;
+    background-position: 0;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 99em;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--toggle-size);
+}
+
+.theme-checkbox::before {
+    content: "";
+    width: 2.25em;
+    height: 2.25em;
+    position: absolute;
+    top: 0.438em;
+    left: 0.438em;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background-size: 205%;
+    background-position: 100%;
+    border-radius: 50%;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+    .theme-checkbox:checked::before {
+    left: calc(100% - 2.25em - 0.438em);
+    background-position: 0;
+}
+
+    .theme-checkbox:checked {
+    background-position: 100%;
+}
