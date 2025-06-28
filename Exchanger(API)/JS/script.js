@@ -32,8 +32,33 @@
         xhr.send();
     }
 
+
     function toggle(){
         document.body.classList.toggle("light");
     }
 
-   
+    function reSizeFont(){
+        
+        // let parent = document.getElementById("parent-div");
+        let screenWidth = window.innerWidth;
+        let select_font_size = document.getElementById("select"); 
+
+            if (screenWidth < 400) {
+                select_font_size.style.fontSize = "8px";
+            }
+            
+            else if (screenWidth < 600){
+                select_font_size.style.fontSize = "10px";
+            }
+            
+            else {
+                select_font_size.style.fontSize = "15px";
+            }
+        }       
+
+        reSizeFont();
+
+        window.addEventListener("resize", reSizeFont);
+
+
+    
