@@ -39,7 +39,6 @@
 
     function reSizeFont(){
         
-        // let parent = document.getElementById("parent-div");
         let screenWidth = window.innerWidth;
         let select_font_size = document.getElementById("select"); 
 
